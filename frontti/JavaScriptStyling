@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul class="fruits">
+    <li>Apple</li>
+    <li>Banana</li>
+    <li data-foodtype="squishy">Orange</li>
+    <li>Pear</li>
+    <li>Kiwi</li>
+    <li id="berry">Strawberry</li>
+</ul>
+<script>
+  //teht 1
+  const berry = document.getElementById('berry');
+  berry.style.backgroundColor = "red";
+  console.log(berry.outerHTML);
+  console.log('I found the berry: ' + berry.innerHTML);
+
+  //teht 2
+  const orange = document.querySelector('li[data-foodtype=squishy]');
+  orange.style.backgroundColor = "orange";
+  console.log(orange.outerHTML);
+  console.log('I found the fruit: ' + orange.innerHTML);
+
+  //teht 3
+    const lista = document.getElementsByTagName('li');
+    console.log(lista);
+
+
+  //teht 3.2
+  console.log('Using the for loop here:');
+
+  for (let i=0; i< lista.length; i++){
+    lista[i].style.width = "100px";
+    lista[i].style.listStyleType = "none";
+    console.log(lista[i].innerHTML);
+    if(lista[i].innerText==="Pear"){
+      lista[i].style.backgroundColor= "green";
+    };
+  }
+  //teht 4
+  const node = document.querySelectorAll('li');
+  console.log(node);
+
+  //teht 4.2
+   console.log('Using a forEach here:');
+   node.forEach((item) => {
+     item.style.border = '1px solid black'
+     console.log(item.innerHTML);
+   });
+
+</script>
+</body>
+</html>
