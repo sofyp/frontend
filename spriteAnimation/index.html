@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <title>Sprite Animation</title>
+</head>
+<body>
+    <div class="stage">
+    <div class="dog"></div>
+</div>
+<script>
+    let dog = document.querySelector('.dog');
+    let dogTimer = setTimeout(() =>{
+      dog.classList.add('dogmove');
+      console.log('walking');
+    },50);
+   //document.addEventListener('DOMContentLoaded', dogTimer);
+</script>
+</body>
+</html>
